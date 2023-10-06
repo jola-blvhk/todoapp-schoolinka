@@ -9,14 +9,14 @@ SchoolLink todo web app for managing your Task and your daily activities.
 
 Here's some notes about my submission:
 
-1. A link to the project repository   [SchoolinkaTodo](https://github.com/The-CodeINN/todoapp-schoolinka.git)
+1. A link to the project repository   [SchoolinkaTodo]((https://github.com/jola-blvhk/todoapp-schoolinka))
 
-2. A publicly live hosted URL of the challenge  https://todoapp-schoolinka.vercel.app/
+2. A publicly live hosted URL of the challenge (https://todoapp-schoolinka-eta.vercel.app/todo)
 
 Thank you very much.
 
-Best regards
-Richard Emijere
+Best regards,
+Oluremi Bello
 
 # Technologies 
 
@@ -35,7 +35,7 @@ Richard Emijere
 # How to Contribute
 
 1. Clone the repository 
-$ git clone [https://github.com/The-CodeINN/todoapp-schoolinka.git](https://github.com/The-CodeINN/todoapp-schoolinka.git)
+$ git clone [https://github.com/jola-blvhk/todoapp-schoolinka.git](https://github.com/jola-blvhk/todoapp-schoolinka)
 
 2. Change directory into the cloned folder and run the setup script
 $ cd todoapp-schoolinka
@@ -52,7 +52,7 @@ Vercel was used to deploy the app.
  + [Vercel](https://vercel.com/dashboard)
 
 # License
-The MIT License - Copyright (c) 2023 - Present, TheCodeINN/  Storage Service.
+The MIT License 
 
 # Author
-Richard Emijere (Frontend Developer)
+Oluremi Bello (Frontend Developer)
