@@ -52,7 +52,7 @@ Vercel was used to deploy the app.
  + [Vercel](https://vercel.com/dashboard)
 
 # License
-The MIT License - Copyright (c) 2023 - Present, TheCodeINN/  Storage Service.
+The MIT License 
 
 # Author
-Richard Emijere (Frontend Developer)
+Oluremi Bello (Frontend Developer)
