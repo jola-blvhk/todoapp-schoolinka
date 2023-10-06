@@ -16,7 +16,7 @@ Here's some notes about my submission:
 Thank you very much.
 
 Best regards
-Richard Emijere
+Oluremi Bello
 
 # Technologies 
 
