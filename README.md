@@ -35,7 +35,7 @@ Oluremi Bello
 # How to Contribute
 
 1. Clone the repository 
-$ git clone [https://github.com/The-CodeINN/todoapp-schoolinka.git](https://github.com/jola-blvhk/todoapp-schoolinka)
+$ git clone [https://github.com/jola-blvhk/todoapp-schoolinka.git](https://github.com/jola-blvhk/todoapp-schoolinka)
 
 2. Change directory into the cloned folder and run the setup script
 $ cd todoapp-schoolinka
