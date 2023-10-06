@@ -15,7 +15,7 @@ Here's some notes about my submission:
 
 Thank you very much.
 
-Best regards
+Best regards,
 Oluremi Bello
 
 # Technologies 
