@@ -58,8 +58,8 @@ export const AddOrEditTask = ({ onClose, type }: AddTaskProps) => {
     toast({
       title: "You submitted the following values:",
       description: (
-        <pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
-          <code className='text-white'>{JSON.stringify(data, null, 2)}</code>
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
     });
@@ -73,51 +73,51 @@ export const AddOrEditTask = ({ onClose, type }: AddTaskProps) => {
 
   return (
     <Card className={cn("h-[380px]", hasFormError && "h-[420px]")}>
-      <CardHeader className='flex flex-row items-centers justify-between space-y-0 pb-4'>
-        <CardTitle className='text-md font-semibold'>
+      <CardHeader className="flex flex-row items-centers justify-between space-y-0 pb-4">
+        <CardTitle className="text-md font-semibold">
           {type === "add" ? "Add Task" : "Edit Task"}
         </CardTitle>
-        <X onClick={onClose} className='cursor-pointer' />
+        <X onClick={onClose} className="cursor-pointer" />
       </CardHeader>
-      <div className='px-6'>
+      <div className="px-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FormField
               control={form.control}
-              name='description'
+              name="description"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
                     <Textarea
                       {...field}
                       disabled={isLoading}
-                      placeholder='Create wireframe'
+                      placeholder="Create wireframe"
                       rows={5}
-                      className='border-2 border-gray-300 rounded-md'
+                      className="border-2 border-gray-300 rounded-md"
                     />
                   </FormControl>
-                  <FormMessage className='text-xs' />
+                  <FormMessage className="text-xs" />
                 </FormItem>
               )}
             />
-            <div className='flex justify-between py-3 space-x-3'>
-              <div className='grid gap-2'>
+            <div className="flex justify-between py-3 space-x-3">
+              <div className="grid gap-2">
                 <FormField
                   control={form.control}
-                  name='date'
+                  name="date"
                   render={({ field }) => (
                     <FormItem>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
                             <Button
-                              variant='outline'
+                              variant="outline"
                               className={cn(
                                 "space-x-1 p-2",
                                 !field.value && "text-muted-foreground"
                               )}
                             >
-                              <CalendarIcon className='w-4 h-4' />
+                              <CalendarIcon className="w-4 h-4" />
                               {field.value ? (
                                 format(field.value, "PPP")
                               ) : (
@@ -126,74 +126,76 @@ export const AddOrEditTask = ({ onClose, type }: AddTaskProps) => {
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
-                        <PopoverContent className='w-auto p-0' align='start'>
+                        <PopoverContent className="w-auto p-0" align="start">
                           <Calendar
-                            mode='single'
+                            mode="single"
                             selected={field.value}
                             onSelect={field.onChange}
                             disabled={(date) =>
-                              date > new Date() || date < new Date("1900-01-01")
+                              date.getTime() <
+                                new Date().setHours(0, 0, 0, 0) ||
+                              date > new Date("2100-01-02")
                             }
                             initialFocus
                           />
                         </PopoverContent>
                       </Popover>
-                      <FormMessage className='text-xs' />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />
               </div>
-              <div className='grid gap-2'>
+              <div className="grid gap-2">
                 <FormField
                   control={form.control}
-                  name='start_time'
+                  name="start_time"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
                         <Input
-                          type='time'
-                          placeholder='00'
+                          type="time"
+                          placeholder="00"
                           disabled={isLoading}
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage className='text-xs' />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />
               </div>
-              <div className='grid gap-2'>
+              <div className="grid gap-2">
                 <FormField
                   control={form.control}
-                  name='end_time'
+                  name="end_time"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
                         <Input
-                          type='time'
-                          placeholder='00'
+                          type="time"
+                          placeholder="00"
                           disabled={isLoading}
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage className='text-xs' />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />
               </div>
             </div>
-            <div className='flex justify-between items-center'>
-              <div className='space-x-2 flex items-center'>
-                <Bell fill='#000' className='w-4 h-4 ' />
+            <div className="flex justify-between items-center">
+              <div className="space-x-2 flex items-center">
+                <Bell fill="#000" className="w-4 h-4 " />
                 <h3>10 minutes before</h3>
               </div>
               <X />
             </div>
-            <div className='grid grid-cols-2 gap-6 pt-5'>
-              <Button onClick={handleClose} variant='outline'>
+            <div className="grid grid-cols-2 gap-6 pt-5">
+              <Button onClick={handleClose} variant="outline">
                 Cancel
               </Button>
-              <Button disabled={isLoading} type='submit'>
+              <Button disabled={isLoading} type="submit">
                 {type === "add" ? "Add" : "Save"}
               </Button>
             </div>
